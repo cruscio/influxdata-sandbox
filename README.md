@@ -1,3 +1,18 @@
+Sandbox for Support request 39382
+
+Quick and dirty modification to stand up latest Influx/Telegraf/Chronograf with HTTP auth enabled, to test Chronograf with a READ-only user
+
+Just launch with `docker-compose up`, not the sandbox script. Then open Chronograf at `http://localhost:8888` and configure a data source in chronograf with
+
+- Connection String: `http://influxdb:8086`
+- Username: `reader`
+- Password: `reader`
+- Telegraf Database: `general_server`
+
+Open Data Explorer and you should see no listed databases to select.
+
+Clean up with `docker-compose down && docker-compose rm -v`
+
 # InfluxData Sandbox
 
 This repo is a quick way to get the entire TICK Stack spun up and working together. It uses [Docker](https://www.docker.com/) to spin up the full TICK stack in a connected fashion. This is heavily tested on MacOS and should mostly work on Linux and Windows.
