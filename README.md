@@ -11,7 +11,7 @@ Just launch with `docker-compose up`, not the sandbox script. Then open Chronogr
 
 Open Data Explorer and you should see no listed databases to select.
 
-Clean up with `docker-compose down && docker-compose rm -v`
+Clean up with `docker-compose rm -v`
 
 # InfluxData Sandbox
 
